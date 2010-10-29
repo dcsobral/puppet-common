@@ -12,7 +12,7 @@ define common::concatfilepart (
   if defined(File[$file]) {
     debug("${file} already defined")
   } else {
-    file {$file:
+    file { "$file":
       ensure => present,
     }
   }

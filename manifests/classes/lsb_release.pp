@@ -36,10 +36,12 @@ class assert_lsbdistcodename {
 			exec { "true # assert_lsbdistcodename":
 				alias => assert_lsbdistcodename,
 				logoutput => on_failure,
+				onlyif => 'false',
 			}
 			exec { "true # require_lsbdistcodename":
 				alias => require_lsbdistcodename,
 				logoutput => on_failure,
+				onlyif => 'false',
 			}
 		}
 	}
